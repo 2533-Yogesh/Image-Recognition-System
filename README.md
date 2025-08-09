@@ -41,6 +41,7 @@ ultralytics==8.0.196
 opencv-python-headless==4.8.1.78
 
 ### Folder Structure
+```
 📂 project/
  ├── app.py              # Main Flask app
  ├── requirements.txt    # Dependencies
@@ -49,7 +50,7 @@ opencv-python-headless==4.8.1.78
  │    └── result.html    # Results display
  ├── static/
  │    └── uploads/       # Uploaded + annotated images
-
+```
 ### Model
 Default model: yolov8n.pt (YOLOv8 nano, pretrained on COCO dataset)
 
