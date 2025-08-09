@@ -49,6 +49,9 @@ opencv-python-headless==4.8.1.78
  │    ├── index.html     # Upload form
  │    └── result.html    # Results display
  ├── static/
+ |    ├──css/
+ │    |    ├── style.css    
+ │    |    └── result.css 
  │    └── uploads/       # Uploaded + annotated images
 ```
 ### Model
