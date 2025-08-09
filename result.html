@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Detection Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/result.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Detection Result</h1>
+
+    <div class="result-flex glass-card">
+      <!-- Image Section -->
+      <section class="image-section">
+        <h2>Uploaded Image with Detections</h2>
+        <img src="/{{ image_path }}" alt="Detected objects">
+      </section>
+
+      <!-- Detection Section -->
+      <section class="prediction-section">
+        <h2>Detected Objects</h2>
+        <ol>
+          {% for r in results %}
+            <li>
+              <span class="label">{{ r['label'] }}</span>
+              <span class="prob">{{ (r['prob'] * 100) | round(2) }}%</span>
+            </li>
+          {% endfor %}
+        </ol>
+      </section>
+    </div>
+
+    <div class="back-link">
+      <a href="{{ url_for('index') }}">⬅ Try another image</a>
+    </div>
+  </div>
+</body>
+</html>
+

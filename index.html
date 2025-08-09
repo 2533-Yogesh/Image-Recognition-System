@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Image Recognition - Upload</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <div class="glass-card">
+    <h1>Upload an image</h1>
+    <form method="post" enctype="multipart/form-data">
+      <input type="file" id="fileInput" name="file" accept="image/*" required>
+      <img id="preview" src="" alt="Image preview" style="display:none;">
+      <button type="submit">Upload & Predict</button>
+    </form>
+    <p>Model: MobileNetV2 (ImageNet).<br> Upload only JPG or PNG file.</p>
+  </div>
+
+</body>
+</html>

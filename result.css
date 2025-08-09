@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(-45deg, #8ff9f9e8, #ffe4c4ec, #8ff9f9e8, #ffe4c4ec);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 15px;
+  backdrop-filter: blur(15px) saturate(150%);
+  -webkit-backdrop-filter: blur(15px) saturate(150%);
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Flexbox for side-by-side layout */
+.result-flex {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap; /* responsive stacking */
+}
+
+.image-section,
+.prediction-section {
+  flex: 1 1 300px;
+  /* NEW: ensures equal top alignment for neat look */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Image styling */
+.image-section img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  /* NEW: keep height consistent if images vary */
+  object-fit: contain;
+}
+
+/* Predictions list */
+.prediction-section ol {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  width: 100%; /* NEW: makes list match section width */
+}
+
+.prediction-section li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.45);
+  margin-bottom: 8px;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.prediction-section li:hover {
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.label {
+  font-weight: bold;
+  color: #333;
+}
+
+.prob {
+  font-weight: bold;
+  color: #ff6b81;
+}
+
+.back-link {
+  margin-top: 20px;
+}
+
+.back-link a {
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(135deg, #ffb347, #ff6b81);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.back-link a:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #ffc56d, #ff8595);
+}
