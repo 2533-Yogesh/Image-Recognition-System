@@ -1,8 +1,4 @@
-
-markdown
-Copy
-Edit
-# YOLOv8 Object Detection Web App (Flask + OpenCV)
+# Image Recognition System (Flask + OpenCV + YOLO)
 
 A lightweight Flask web application for real-time object detection using the YOLOv8 model from Ultralytics.  
 Users can upload an image, and the app will detect objects, annotate the image, and display the results in the browser.
